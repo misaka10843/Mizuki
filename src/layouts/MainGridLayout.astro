@@ -559,8 +559,8 @@ const transparentClass = shouldEnableTransparency
 
     <!-- Banner - 始终渲染，通过 JS 控制显示隐藏 -->
     <div id="banner-wrapper"
-         class={`absolute z-10 w-full transition duration-700 overflow-hidden ${mobileNonHomeBannerClass}`}
-         style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
+         class=`absolute z-10 w-full transition duration-700 overflow-hidden ${mobileNonHomeBannerClass}`
+         style=`top: -${String(BANNER_HEIGHT_EXTEND)}vh`>
 
         {(isCarouselEnabled && selectedDesktopImages.length > 1) || (isCarouselEnabled && selectedMobileImages.length > 1) ? (
             <!-- Carousel mode for multiple images -->
@@ -725,8 +725,8 @@ const transparentClass = shouldEnableTransparency
     </div>
 
     <!-- Main content -->
-    <div class={`absolute w-full z-30 pointer-events-none ${mobileNonHomeBannerClass ? 'mobile-main-no-banner' : ''} ${siteConfig.wallpaperMode.defaultMode === 'none' ? 'no-banner-layout' : ''} ${transparentClass}`}
-         style={`top: ${finalMainPanelTop}`}>
+    <div class=`absolute w-full z-30 pointer-events-none ${mobileNonHomeBannerClass ? 'mobile-main-no-banner' : ''} ${siteConfig.wallpaperMode.defaultMode === 'none' ? 'no-banner-layout' : ''} ${transparentClass}`}
+         style=`top: ${String(finalMainPanelTop)}`>
         <!-- The pointer-events-none here prevent blocking the click event of the TOC -->
         <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto">
             <div id="main-grid"
